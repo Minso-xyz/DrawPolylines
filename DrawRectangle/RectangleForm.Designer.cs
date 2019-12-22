@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gbRectangle = new System.Windows.Forms.GroupBox();
+            this.gbRectangleForm = new System.Windows.Forms.GroupBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnDrawRectangle = new System.Windows.Forms.Button();
             this.gbCoordinates = new System.Windows.Forms.GroupBox();
@@ -38,33 +38,35 @@
             this.txtXCoord = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.rbCoordinates = new System.Windows.Forms.RadioButton();
-            this.rbPickPoint = new System.Windows.Forms.RadioButton();
+            this.rbPickOnScreen = new System.Windows.Forms.RadioButton();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.gbRectangle.SuspendLayout();
+            this.label5 = new System.Windows.Forms.Label();
+            this.gbRectangleForm.SuspendLayout();
             this.gbCoordinates.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbRectangle
+            // gbRectangleForm
             // 
-            this.gbRectangle.Controls.Add(this.lblInfo);
-            this.gbRectangle.Controls.Add(this.btnDrawRectangle);
-            this.gbRectangle.Controls.Add(this.gbCoordinates);
-            this.gbRectangle.Controls.Add(this.rbCoordinates);
-            this.gbRectangle.Controls.Add(this.rbPickPoint);
-            this.gbRectangle.Controls.Add(this.txtHeight);
-            this.gbRectangle.Controls.Add(this.label2);
-            this.gbRectangle.Controls.Add(this.txtWidth);
-            this.gbRectangle.Controls.Add(this.label1);
-            this.gbRectangle.Location = new System.Drawing.Point(28, 22);
-            this.gbRectangle.Name = "gbRectangle";
-            this.gbRectangle.Size = new System.Drawing.Size(296, 356);
-            this.gbRectangle.TabIndex = 0;
-            this.gbRectangle.TabStop = false;
-            this.gbRectangle.Text = "Enter Rectangle Parameters";
+            this.gbRectangleForm.Controls.Add(this.label5);
+            this.gbRectangleForm.Controls.Add(this.lblInfo);
+            this.gbRectangleForm.Controls.Add(this.btnDrawRectangle);
+            this.gbRectangleForm.Controls.Add(this.gbCoordinates);
+            this.gbRectangleForm.Controls.Add(this.rbCoordinates);
+            this.gbRectangleForm.Controls.Add(this.rbPickOnScreen);
+            this.gbRectangleForm.Controls.Add(this.txtHeight);
+            this.gbRectangleForm.Controls.Add(this.label2);
+            this.gbRectangleForm.Controls.Add(this.txtWidth);
+            this.gbRectangleForm.Controls.Add(this.label1);
+            this.gbRectangleForm.Location = new System.Drawing.Point(28, 22);
+            this.gbRectangleForm.Name = "gbRectangleForm";
+            this.gbRectangleForm.Size = new System.Drawing.Size(296, 356);
+            this.gbRectangleForm.TabIndex = 0;
+            this.gbRectangleForm.TabStop = false;
+            this.gbRectangleForm.Text = "Enter Rectangle Parameters";
             // 
             // lblInfo
             // 
@@ -149,22 +151,22 @@
             this.rbCoordinates.UseVisualStyleBackColor = true;
             this.rbCoordinates.CheckedChanged += new System.EventHandler(this.RbCoordinates_CheckedChanged);
             // 
-            // rbPickPoint
+            // rbPickOnScreen
             // 
-            this.rbPickPoint.AutoSize = true;
-            this.rbPickPoint.Location = new System.Drawing.Point(156, 127);
-            this.rbPickPoint.Name = "rbPickPoint";
-            this.rbPickPoint.Size = new System.Drawing.Size(97, 17);
-            this.rbPickPoint.TabIndex = 4;
-            this.rbPickPoint.Text = "Pick OnScreen";
-            this.toolTip1.SetToolTip(this.rbPickPoint, "Insertion Point will be based on the selected point onscreen");
-            this.rbPickPoint.UseVisualStyleBackColor = true;
-            this.rbPickPoint.CheckedChanged += new System.EventHandler(this.RbPickPoint_CheckedChanged);
+            this.rbPickOnScreen.AutoSize = true;
+            this.rbPickOnScreen.Location = new System.Drawing.Point(156, 127);
+            this.rbPickOnScreen.Name = "rbPickOnScreen";
+            this.rbPickOnScreen.Size = new System.Drawing.Size(97, 17);
+            this.rbPickOnScreen.TabIndex = 4;
+            this.rbPickOnScreen.Text = "Pick OnScreen";
+            this.toolTip1.SetToolTip(this.rbPickOnScreen, "Insertion Point will be based on the selected point onscreen");
+            this.rbPickOnScreen.UseVisualStyleBackColor = true;
+            this.rbPickOnScreen.CheckedChanged += new System.EventHandler(this.RbPickOnScreen_CheckedChanged);
             // 
             // txtHeight
             // 
             this.txtHeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtHeight.Location = new System.Drawing.Point(112, 76);
+            this.txtHeight.Location = new System.Drawing.Point(112, 68);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(100, 20);
             this.txtHeight.TabIndex = 3;
@@ -173,7 +175,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 76);
+            this.label2.Location = new System.Drawing.Point(29, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 2;
@@ -182,7 +184,7 @@
             // txtWidth
             // 
             this.txtWidth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtWidth.Location = new System.Drawing.Point(112, 42);
+            this.txtWidth.Location = new System.Drawing.Point(112, 34);
             this.txtWidth.Name = "txtWidth";
             this.txtWidth.Size = new System.Drawing.Size(100, 20);
             this.txtWidth.TabIndex = 1;
@@ -191,24 +193,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 42);
+            this.label1.Location = new System.Drawing.Point(29, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Width:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Choose  Starting Point:";
+            // 
             // RectangleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 390);
-            this.Controls.Add(this.gbRectangle);
+            this.ClientSize = new System.Drawing.Size(345, 389);
+            this.Controls.Add(this.gbRectangleForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "RectangleForm";
             this.Text = "RectangleForm";
-            this.gbRectangle.ResumeLayout(false);
-            this.gbRectangle.PerformLayout();
+            this.gbRectangleForm.ResumeLayout(false);
+            this.gbRectangleForm.PerformLayout();
             this.gbCoordinates.ResumeLayout(false);
             this.gbCoordinates.PerformLayout();
             this.ResumeLayout(false);
@@ -217,7 +228,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbRectangle;
+        private System.Windows.Forms.GroupBox gbRectangleForm;
         private System.Windows.Forms.Button btnDrawRectangle;
         private System.Windows.Forms.GroupBox gbCoordinates;
         private System.Windows.Forms.TextBox txtYCoord;
@@ -225,12 +236,13 @@
         private System.Windows.Forms.TextBox txtXCoord;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbCoordinates;
-        private System.Windows.Forms.RadioButton rbPickPoint;
+        private System.Windows.Forms.RadioButton rbPickOnScreen;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtWidth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Label label5;
     }
 }

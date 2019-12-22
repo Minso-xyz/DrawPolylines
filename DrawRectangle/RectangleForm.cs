@@ -36,7 +36,7 @@ namespace DrawRectangle
                 return;
             }
 
-            if (rbPickPoint.Checked)
+            if (rbPickOnScreen.Checked)
             {
                 // Ask for the insertionPoint of the Rectangle
                 this.Hide();
@@ -74,6 +74,7 @@ namespace DrawRectangle
 
             double width = double.Parse(txtWidth.Text.Trim());
             double height = double.Parse(txtHeight.Text.Trim());
+
             RectangleUtil rect = new RectangleUtil();
             rect.DrawRectangle(width, height, insPt);
             lblInfo.Text = "Rectangle was created successfully!";
@@ -107,7 +108,7 @@ namespace DrawRectangle
             return isValid;
         }
 
-        private void RbPickPoint_CheckedChanged(object sender, EventArgs e)
+        private void RbPickOnScreen_CheckedChanged(object sender, EventArgs e)
         {
             gbCoordinates.Enabled = false;
         }

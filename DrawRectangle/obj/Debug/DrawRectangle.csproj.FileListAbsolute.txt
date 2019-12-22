@@ -1,0 +1,8 @@
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\bin\Debug\DrawRectangle.dll
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\bin\Debug\DrawRectangle.pdb
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\obj\Debug\DrawRectangle.csprojAssemblyReference.cache
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\obj\Debug\DrawRectangle.RectangleForm.resources
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\obj\Debug\DrawRectangle.csproj.GenerateResource.cache
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\obj\Debug\DrawRectangle.csproj.CoreCompileInputs.cache
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\obj\Debug\DrawRectangle.dll
+C:\Arnold\udemy\AutoCAD-C# Winforms\Projects\DrawRectangle\DrawRectangle\obj\Debug\DrawRectangle.pdb

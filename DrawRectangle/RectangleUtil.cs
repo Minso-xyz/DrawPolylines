@@ -52,6 +52,20 @@ namespace DrawRectangle
 
                     btr.AppendEntity(pl);
                     trans.AddNewlyCreatedDBObject(pl, true);
+
+                    
+                    string txt = width.ToString() + " x " + height.ToString();
+                    //Point2d txtPt = new Point2d(insPt.X + (0.5 * width), insPt.Y + (0.5 * height));
+                    Point3d txtPt = new Point3d(insPt.X + (0.5 * width), insPt.Y + (0.5 * height) ,0);
+                    using (MText mtx = new MText())
+                    {
+                        mtx.Contents = txt;
+                        mtx.Location = txtPt;
+
+                        btr.AppendEntity(mtx);
+                        trans.AddNewlyCreatedDBObject(mtx, true);
+                    }
+                    
                     trans.Commit();
 
                     edt.WriteMessage("Rectangle is drawn successfully!");
